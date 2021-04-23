@@ -6,26 +6,26 @@ Boilerplate for quickly creating a DRF projects and apps.
 ## Links
 
 * PIP Requirements: <https://git.io/JOM5l>
-    * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/requirements.txt>
+  * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/requirements.txt>
 * Project Template: <https://git.io/JOM5X>
-    * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/project.tar.gz>
+  * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/project.tar.gz>
 * App Template: <https://git.io/JOM5y>
-    * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/app.tar.gz>
+  * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/app.tar.gz>
 
 ## Included Technologies
 
 * Django (3.1+)
 * PyCharm (run configurations)
 * ipython
-* django-debug-toolbar
-* django-cors-headers
-* django-simple-history
-* django-background-tasks
-* djangorestframework
-* django-filter
-* drf-yasg
-* djangorestframework-simplejwt
-* drf-access-policy
+* [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
+* [django-cors-headers](https://github.com/adamchainz/django-cors-headers)
+* [django-simple-history](https://github.com/jazzband/django-simple-history)
+* [django-background-tasks](https://github.com/arteria/django-background-tasks)
+* [djangorestframework](https://www.django-rest-framework.org/)
+* [django-filter](https://github.com/carltongibson/django-filter)
+* [drf-yasg](https://github.com/axnsan12/drf-yasg)
+* [djangorestframework-simplejwt](https://github.com/jazzband/django-rest-framework-simplejwt)
+* [drf-access-policy](https://github.com/rsinger86/drf-access-policy)
 
 # Usage
 
