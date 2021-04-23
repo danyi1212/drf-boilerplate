@@ -1,6 +1,6 @@
 mkdir build
-tar -cvzf build/project.tar.gz ./project_template
-tar -cvzf build/app.tar.gz ./app_template
+tar -cvzf build/project.tar.gz -C project_template/ .
+tar -cvzf build/app.tar.gz -C app_template/ .
 
 if not exist ./venv virtualenv venv
 call ./venv/Scripts/activate.bat
