@@ -15,7 +15,6 @@ Boilerplate for quickly creating a DRF projects and apps.
 ## Included Technologies
 
 * Django (3.1+)
-* PyCharm (run configurations)
 * ipython
 * [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
 * [django-cors-headers](https://github.com/adamchainz/django-cors-headers)
