@@ -3,5 +3,5 @@ from rest_framework import viewsets
 from {{ app_name }} import models
 from {{ app_name }} import serializers
 
-# Create your viewsets here.
+# Create your views and ViewSets here.
 # https://www.django-rest-framework.org/api-guide/viewsets/
