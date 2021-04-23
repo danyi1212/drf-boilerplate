@@ -1,0 +1,4 @@
+from rest_access_policy import AccessPolicy
+
+# Create your permission access policies here
+# https://rsinger86.github.io/drf-access-policy/

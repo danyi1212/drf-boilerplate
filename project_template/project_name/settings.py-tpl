@@ -244,12 +244,26 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
 }
 
+# drf-access-policy configurations
+# https://rsinger86.github.io/drf-access-policy/
+
+DRF_ACCESS_POLICY = {
+    "reusable_conditions": "{{ project_name }}.global_access_conditions"
+}
+
 # drf-yasg Swagger configurations
 # https://drf-yasg.readthedocs.io/en/stable/settings.html
 
 SWAGGER_SETTINGS = {
     'LOGIN_URL': reverse_lazy('admin:login'),
     'LOGOUT_URL': reverse_lazy('admin:logout'),
+}
+
+# Simple JWT settings
+# https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html
+
+SIMPLE_JWT = {
+    'UPDATE_LAST_LOGIN': True,
 }
 
 # -----------------------------------------
