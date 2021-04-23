@@ -5,9 +5,12 @@ Boilerplate for quickly creating a DRF projects and apps.
 
 ## Links
 
-* PIP Requirements: <https://git.io/JOM5l> (<https://github.com/danyi1212/drf-boilerplate/releases/latest/download/requirements.txt>)
-* Project Template: <https://git.io/JOM5X> (<https://github.com/danyi1212/drf-boilerplate/releases/latest/download/project.tar.gz>)
-* App Template: <https://git.io/JOM5y> (<https://github.com/danyi1212/drf-boilerplate/releases/latest/download/app.tar.gz>)
+* PIP Requirements: <https://git.io/JOM5l>
+    * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/requirements.txt>
+* Project Template: <https://git.io/JOM5X>
+    * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/project.tar.gz>
+* App Template: <https://git.io/JOM5y>
+    * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/app.tar.gz>
 
 ## Included Technologies
 
