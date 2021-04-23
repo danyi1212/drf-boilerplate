@@ -1,0 +1,6 @@
+from rest_framework import serializers
+
+from {{ app_name }} import models
+
+# Create your serializers here.
+# https://www.django-rest-framework.org/api-guide/serializers/

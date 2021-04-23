@@ -1,0 +1,4 @@
+from django.db import models
+
+# Create your models here.
+# https://docs.djangoproject.com/en/{{ docs_version }}/topics/db/models/
