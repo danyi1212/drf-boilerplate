@@ -2,6 +2,7 @@
 # Django Rest Framework project boilerplate
 
 Boilerplate for quickly creating a DRF projects and apps.
+Includes run configurations for PyCharm.
 
 ## Links
 
