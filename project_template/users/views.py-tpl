@@ -1,0 +1,25 @@
+from rest_framework import viewsets
+from rest_framework.decorators import action
+
+from users import models
+from users import serializers
+from users import permissions
+
+
+class UserViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = models.User.objects.all()
+    serializer_class = serializers.UserSerializer
+    permission_classes = (permissions.UserAccessPolicy,)
+    filterset_fields = ("last_login", "date_joined", "groups")
+    search_fields = ('^username', "first_name", "last_name")
+    ordering_fields = ('username', 'last_login')
+
+    def get_object(self):
+        if self.action == "me":
+            return self.request.user
+        else:
+            return super(UserViewSet, self).get_object()
+
+    @action(detail=False, methods=["GET"], filter_backends=None, pagination_class=None)
+    def me(self, request, *args, **kwargs):
+        return self.dispatch(request, *args, **kwargs)

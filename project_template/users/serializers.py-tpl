@@ -1,0 +1,13 @@
+from rest_framework import serializers
+
+from users import models
+
+
+class UserSerializer(serializers.ModelSerializer):
+    groups = serializers.SlugRelatedField(slug_field="name", read_only=True, many=True)
+    full_name = serializers.CharField(read_only=True, source="get_full_name")
+
+    class Meta:
+        model = models.User
+        fields = ("id", "username", "email", "full_name", "first_name", "last_name",
+                  "is_active", "is_staff", "is_superuser", "groups", "last_login", "date_joined")

@@ -1,0 +1,6 @@
+from background_task import background
+
+from users import models
+
+# Create your background tasks here.
+# https://django-background-tasks.readthedocs.io/en/latest/#creating-and-registering-tasks

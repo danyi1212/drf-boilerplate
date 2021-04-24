@@ -1,0 +1,6 @@
+from django.dispatch import receiver
+
+from users import models
+
+# Create your signals here.
+# https://docs.djangoproject.com/en/3.2/topics/signals/

@@ -58,7 +58,6 @@ urlpatterns = [
     path("auth/", include(auth_urlpatterns)),
 
     # Project app routers
-
-    # (duplicate this line for every one of your project's apps)
+    path("users/", include("users.urls")),
     # path("<app_name>/", include("<app_name>.urls")),
 ]

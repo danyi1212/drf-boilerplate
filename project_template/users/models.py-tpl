@@ -1,0 +1,9 @@
+from django.contrib.auth.models import AbstractUser
+from simple_history.models import HistoricalRecords
+
+# It’s highly recommended to set up a custom user model, even if the default User model is sufficient for you.
+# https://docs.djangoproject.com/en/{{ docs_version }}/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project
+
+
+class User(AbstractUser):
+    history = HistoricalRecords(excluded_fields=["password", "last_login"])

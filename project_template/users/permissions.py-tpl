@@ -1,0 +1,17 @@
+from rest_access_policy import AccessPolicy
+
+
+class UserAccessPolicy(AccessPolicy):
+    statements = (
+        {
+            "principal": "authenticated",
+            "action": ("list", "retrieve", "me"),
+            "effect": "allow",
+        },
+        {
+            "principal": "authenticated",
+            "action": "*",
+            "condition": "user_is_superuser",
+            "effect": "allow",
+        },
+    )

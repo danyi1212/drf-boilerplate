@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'drf_yasg',
 
     # Project apps
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -348,5 +349,10 @@ SIMPLE_JWT = {
 # -----------------------------------------
 # Project apps settings
 # -----------------------------------------
+
+# Custom user model
+# https://docs.djangoproject.com/en/{{ docs_version }}/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project
+
+AUTH_USER_MODEL = 'users.User'
 
 # Add your settings under this line
