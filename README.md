@@ -1,12 +1,19 @@
-
 # Django Rest Framework project boilerplate
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/danyi1212/drf-boilerplate)
+![GitHub all releases](https://img.shields.io/github/downloads/danyi1212/drf-boilerplate/total)
+![GitHub Release Date](https://img.shields.io/github/release-date/danyi1212/drf-boilerplate)
+
 Boilerplate for quickly creating a DRF projects and apps.
-Includes run configurations for PyCharm.
+
+* **Pre-configured** with logging, swagger, global access conditions, and JWT authentication.
+* **App template** including signals, urls (with router), serializer, and background tasks.
+* **Users application** implementing custom model, serializer, and view set for user (with history).
+* Included PyCharm **run configurations** for `runserver`, `shell`, and mockup data export/import.
 
 ## Links
 
-* PIP Requirements: <https://git.io/JOM5l>
+* PIP Requirements: <https://git.io/JOM5l> (optional)
   * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/requirements.txt>
 * Project Template: <https://git.io/JOM5X>
   * Full URL: <https://github.com/danyi1212/drf-boilerplate/releases/latest/download/project.tar.gz>
@@ -27,9 +34,9 @@ Includes run configurations for PyCharm.
 * [djangorestframework-simplejwt](https://github.com/jazzband/django-rest-framework-simplejwt)
 * [drf-access-policy](https://github.com/rsinger86/drf-access-policy)
 
-# Usage
+## Usage
 
-## New Project
+### New Project
 
 Create a new folder with the name of your Django project, open a terminal in it and run:
 
@@ -42,7 +49,10 @@ $ ./venv/Scripts/activate
 (venv) $ py manage.py migrate
 ```
 
-## New App
+> Note:
+> You may want to install the pip packages manually to install specific versions of packages.
+
+### New App
 
 Open a terminal, activated with the project's virtual environment and run:
 
@@ -55,7 +65,6 @@ Add your app to the `INSTALLED_APPS` setting in your `settings.py` file:
 ``` python
 INSTALLED_APPS = [
     # Project apps
-    # ...
     "<app_name>",
 ]
 ```
@@ -65,7 +74,6 @@ Include the app's router in your projects `urls.py` file:
 ``` python
 urlpatterns = [
     # Project app routers
-    # ...
     path("<app_name>/", include("<app_name>.urls")),
 ]
 ```
