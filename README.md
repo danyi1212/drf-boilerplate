@@ -40,6 +40,8 @@ Boilerplate for quickly creating a DRF projects and apps.
 
 Create a new folder with the name of your Django project, open a terminal in it and run:
 
+> **Note:** You may want to install the pip packages manually to install specific versions of packages.
+
 ``` bash
 $ git init
 $ virtualenv venv
@@ -49,8 +51,7 @@ $ ./venv/Scripts/activate
 (venv) $ py manage.py migrate
 ```
 
-> Note:
-> You may want to install the pip packages manually to install specific versions of packages.
+> **Notice:** To use the included PyCharm run configurations, rename the `_run` folder to `.run`.
 
 ### New App
 
