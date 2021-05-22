@@ -22,7 +22,7 @@ Boilerplate for quickly creating a DRF projects and apps.
 
 ## Included Technologies
 
-* Django (3.1+)
+* Django (3.1, 3.2)
 * ipython
 * [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
 * [django-cors-headers](https://github.com/adamchainz/django-cors-headers)
@@ -42,16 +42,36 @@ Create a new folder with the name of your Django project, open a terminal in it 
 
 > **Note:** You may want to install the pip packages manually to install specific versions of packages.
 
+<details>
+    <summary>Click to expand</summary>
+
+    pip install django ipython docutils django-debug-toolbar django-cors-headers django-simple-history django-background-tasks djangorestframwrork django-filter drf-yasg djangorestframework-simplejwt drf-access-policy
+</details>
+
 ``` bash
 $ git init
-$ virtualenv venv
+$ python -m venv venv
 $ ./venv/Scripts/activate
 (venv) $ pip install -r https://git.io/JOM5l
 (venv) $ django-admin startproject <project_name> . --template https://git.io/JOM5X
 (venv) $ py manage.py migrate
 ```
 
+> **Notice:** It is advised to create a `requirements.txt` file to store your project's dependencies.
+
+<details>
+    <summary>Click to expand</summary>
+
+    pip freeze > requirements.txt
+</details>
+
 > **Notice:** To use the included PyCharm run configurations, rename the `_run` folder to `.run`.
+
+<details>
+    <summary>Click to expand</summary>
+
+    mv _run .run
+</details>
 
 ### New App
 
@@ -78,3 +98,14 @@ urlpatterns = [
     path("<app_name>/", include("<app_name>.urls")),
 ]
 ```
+
+## PyCharm Run Configurations
+
+This boilerplate includes PyCharm Run Configurations for:
+
+* **runserver** - Starts a lightweight Web server for development and also serves static files.
+* **process_tasks** - Run tasks that are scheduled to run on the queue.
+* **shell** - Runs a Python interactive interpreter (using IPython, with PyCharm debug mode).
+* **export mockup** - Export model data to `mockup.json` using `dumpdata` (used for mockup data).
+* **import mockup** - Import model data from `mockup.json` using `loaddata` (used for mockup data).
+* **test** - Discover and run tests in your project.
