@@ -30,7 +30,7 @@ Boilerplate for quickly creating a DRF projects and apps.
 * [django-background-tasks](https://github.com/arteria/django-background-tasks)
 * [djangorestframework](https://www.django-rest-framework.org/)
 * [django-filter](https://github.com/carltongibson/django-filter)
-* [drf-yasg](https://github.com/axnsan12/drf-yasg)
+* [drf-spectacular](https://github.com/tfranzel/drf-spectacular)
 * [djangorestframework-simplejwt](https://github.com/jazzband/django-rest-framework-simplejwt)
 * [drf-access-policy](https://github.com/rsinger86/drf-access-policy)
 
@@ -45,7 +45,7 @@ Create a new folder with the name of your Django project, open a terminal in it 
 <details>
     <summary>Click to expand</summary>
 
-    pip install django ipython docutils django-debug-toolbar django-cors-headers django-simple-history django-background-tasks djangorestframwrork django-filter drf-yasg djangorestframework-simplejwt drf-access-policy
+    pip install django ipython docutils django-debug-toolbar django-cors-headers django-simple-history django-background-tasks djangorestframwrork django-filter drf-spectacular djangorestframework-simplejwt drf-access-policy
 </details>
 
 ``` bash
