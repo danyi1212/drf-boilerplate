@@ -1,31 +1,12 @@
-from pathlib import Path
-
 from django.contrib import admin
 from django.urls import path, reverse_lazy, include
 from django.views.generic import RedirectView
 
-from drf_yasg import openapi
-from drf_yasg.views import get_schema_view
-from rest_framework import permissions
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 import debug_toolbar
 
-# OpenAPI 3 Schema View
-# https://drf-yasg.readthedocs.io/en/stable/readme.html#quickstart
-
-schema_view = get_schema_view(
-    openapi.Info(
-        title="{{ project_name }} API",
-        default_version='v1',
-        description=Path('./description.md').read_text(),
-        terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="contact@example.com"),
-        license=openapi.License(name="BSD License"),
-    ),
-    public=False,
-    permission_classes=(permissions.AllowAny,),
-)
 
 # Simple JWT router for Authentication Endpoints
 # https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#installation
@@ -41,11 +22,12 @@ auth_urlpatterns = [
 
 urlpatterns = [
     # Index - redirect to Swagger
-    path('', RedirectView.as_view(url=reverse_lazy("schema-swagger-ui"), permanent=True)),
+    path('', RedirectView.as_view(url=reverse_lazy("swagger"), permanent=True)),
 
     # Swagger endpoints
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger'),
+    path('redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 
     # Django admin endpoints
     path('admin/', admin.site.urls),

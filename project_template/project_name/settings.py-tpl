@@ -65,7 +65,7 @@ INSTALLED_APPS = [
     'simple_history',
     'background_task',
     'rest_framework',
-    'drf_yasg',
+    'drf_spectacular',
 
     # Project apps
     'users',
@@ -310,6 +310,7 @@ DEBUG_TOOLBAR_PANELS = [
 # https://www.django-rest-framework.org/api-guide/settings/
 
 REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -319,7 +320,6 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
     ),
-    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
@@ -334,12 +334,17 @@ DRF_ACCESS_POLICY = {
     "reusable_conditions": "{{ project_name }}.global_access_conditions"
 }
 
-# drf-yasg Swagger configurations
-# https://drf-yasg.readthedocs.io/en/stable/settings.html
+# drf-spectacular Swagger configurations
+# https://github.com/tfranzel/drf-spectacular
 
-SWAGGER_SETTINGS = {
-    'LOGIN_URL': reverse_lazy('admin:login'),
-    'LOGOUT_URL': reverse_lazy('admin:logout'),
+SPECTACULAR_SETTINGS = {
+    'TITLE': '{{ project_name }} API',
+    'DESCRIPTION': Path('./description.md').read_text(),
+    'TOS': "https://www.google.com/policies/terms/",
+    'LICENSE': {"name": "BSD License"},
+    'VERSION': '0.0.0',
+    'SERVE_PERMISSIONS': ['rest_framework.permissions.AllowAny'],
+    # OTHER SETTINGS https://drf-spectacular.readthedocs.io/en/latest/settings.html
 }
 
 # Simple JWT settings
