@@ -1,6 +1,6 @@
 # Getting Started with Django Rest Framework
 
-This project was bootstrapped with [drf-boilerplate](https://github.com/danyi1212/drf-boilerplate) version 1.1.
+This project was bootstrapped with [drf-boilerplate](https://github.com/danyi1212/drf-boilerplate) version 1.2.
 
 ## Clone a new instance
 
