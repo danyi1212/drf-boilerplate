@@ -1,5 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.decorators import action
+from rest_framework.response import Response
 
 from users import models
 from users import serializers
@@ -22,4 +23,8 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
 
     @action(detail=False, methods=["GET"], filter_backends=None, pagination_class=None)
     def me(self, request, *args, **kwargs):
-        return self.dispatch(request, *args, **kwargs)
+        return Response(
+            self.get_serializer(
+                self.get_object()
+            ).data
+        )
